@@ -1,18 +1,20 @@
-# Anxiety-Management-App
-Anxiety disorders influence many people worldwide and have a negative impact on their ability to function normally, be efficient, and most importantly enjoy life. Technologies that are simple to use, feasible, and functional are urgently needed for anxiety control. Nowadays, approaches frequently are either unable to provide inclusive functionality or contribute customized assistance that accommodates to each end user's peculiar necessities. By creating an advanced mobile application with a focus on anxiety management, this study is designed to rectify these issues through providing an integrated strategy that can assist users manage and conquer all the difficulties imposed by anxiety. Correspondingly, our goals are:
-   
-1) Creating an intuitive smartphone application that offers resources and tools for beneficial anxiety management.
+# Peacefull Mind
 
-2) Developing an application targeted to the specific complications resulting from anxiety which provides individualized assistance.
+## Usage
 
-3) Offering instructional materials and coping mechanisms to assist users in recognizing and controlling anxiety.
+After you have cloned the repo, start the project with `npm install` command.
+This will install all project dependecies
+You can simply start the project with `npm start`
 
-4) Maintaining the usability of the program by a variety of users, even those with different degrees of technological skills.
+## NPM scripts
 
-5) Utilizing the most recent researches and studies related to anxiety and also the feedback of the end users in order to regularly enhance and upgrade the application.
+- `npm run start:build`: It tells the TypeScript compiler to watch for changes in your TypeScript source files and automatically recompile them whenever they are modified.
+- `npm run start:run`: It will run the compilled server.js file from `./dist` folder
+- `npm start`: It will run all the npm script concurrently starting with npm:start:\*
+- `npm run dc:up`: Start the stack with Docker Compose
+- `npm run dc:down`: Stop the stack with Docker Compose
 
-6) Employing awards and entertainment to encourage user participation and constancy to anxiety control techniques.
+## If you have docker installed in your host machine
 
-7) Provide an extensive and reliable solution to managing anxiety in order to, eventually, minimize the negative effects that anxiety disorders have on people's lives.
-
-8) Verify that the application complies with industry standards for anxiety management by working with behavioral healthcare practitioners.
+You can simply run the npm script `npm run dc:up` and your server will be up and running.
+To list all the running containers and ports attached with them you can type `docker ps` in your terminal

@@ -1,0 +1,36 @@
+version: "3.2"
+services:
+  peacefull_mind:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: peacefull_mind
+    depends_on:
+      - mongodb
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+      - DB_URL=mongodb://root:molecules123@mongodb:27017/peacefull_mind?authSource=admin
+      - JWT_SECRET=mynameissalina
+  mongodb:
+    image: mongo:6.0.5
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=molecules123
+  mongo-express:
+    image: mongo-express:1.0.0-alpha
+    restart: always
+    container_name: mongo-express
+    depends_on:
+      - mongodb
+      - peacefull_mind
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=molecules123
+      - ME_CONFIG_MONGODB_URL=mongodb://root:molecules123@mongodb:27017/
